@@ -1,0 +1,47 @@
+{
+    "latex-workshop.view.pdf.viewer": "tab",
+    "workbench.editor.enablePreview": false,
+    "explorer.confirmDelete": false,
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex",
+        "*.synctex(busy)",
+        "*.synctex.gz",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.vrb"
+    ],
+    "files.autoSave": "onFocusChange",
+    "[latex]": {
+        "editor.tabSize": 4,
+        "editor.wordWrap": "on",
+    },
+    "cSpell.enabledLanguageIds": [
+        "tex"
+    ],
+    "cSpell.language": "en,ru",
+    "cSpell.words": [
+        "ДВФУ",
+        "тестировщика"
+    ],
+}

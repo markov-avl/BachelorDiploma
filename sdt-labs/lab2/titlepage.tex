@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[14pt]{extsizes}
+\usepackage{setspace}
+\usepackage[left=20mm, top=15mm, right=15mm, bottom=20mm, nohead, footskip=10mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{calc}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\fancyfoot[C]{\fontsize{14}{14}\selectfont г. Владивосток \\ \the\year{}}
+
+\newcommand{\group}{Б9119-02.03.03техпро}
+
+
+\begin{document}
+
+	\thispagestyle{fancy}
+
+	\begin{center}
+		\includegraphics[scale=0.15]{../../fefu-logo} \\
+		\MakeUppercase{Министерство образования и науки Российской Федерации} \\
+		Федеральное государственное автономное образовательное учреждение высшего образования \\
+		\textbf{«Дальневосточный федеральный университет»} \\ (ДВФУ) \\
+		\noindent\rule{\textwidth}{1pt} \\ [0.5cm]
+		\textbf{
+			\MakeUppercase{Институт математики и компьютерных технологий} \\ [0.5cm]
+            Направление 02.03.03 <<Математическое обеспечение и администрирование информационных систем>>
+		} \\ [1cm]
+		\MakeUppercase{
+			Отчёт по лабораторной работе №2 по дисциплине <<Технология разработки программного обеспечения>> \\ [0.5cm]
+			Тема ВКР: <<Автоматизация тестирования по белому ящику>>
+		} \\ [4cm]
+	\end{center}
+
+	\begin{flushright}
+		\begin{tabular}{rl}
+            Выполнили: студенты группы & \group \\ [0.1cm]
+            Лазаренко Л.О. & \rule{\widthof\group}{0.15mm} \\ [0.1cm]
+            Марков А.В. & \rule{\widthof\group}{0.15mm} \\ [0.1cm]
+			Проверил: Гуляева К.А. & \rule{\widthof\group}{0.15mm} \\
+		\end{tabular}
+	\end{flushright}
+
+\end{document}
