@@ -11,9 +11,12 @@
 \usepackage{indentfirst}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage{xltabular}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{longtable}
+\usepackage{longtable}
 
 \hypersetup{
 	colorlinks,
@@ -31,8 +34,11 @@
     \end{titlepage}
 
 	\tableofcontents
+	\listoftables
 	\newpage
 
-    % \input{sections/}
+    \input{sections/description-of-functional-requirements}
+	\input{sections/description-of-business-rules}
+	\input{sections/context-diagram}
     
 \end{document}
