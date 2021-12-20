@@ -36,12 +36,16 @@
         "editor.tabSize": 4,
         "editor.wordWrap": "on",
     },
+    "cSpell.enabled": true,
     "cSpell.enabledLanguageIds": [
+        "tex"
+    ],
+    "cSpell.enableFiletypes": [
         "tex"
     ],
     "cSpell.language": "en,ru",
     "cSpell.words": [
         "ДВФУ",
         "тестировщика"
-    ],
+    ]
 }
