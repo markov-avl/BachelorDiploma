@@ -9,12 +9,16 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{calc}
+\usepackage{multicol}
+\usepackage{array}
 
 \renewcommand{\headrulewidth}{0pt}
 \fancyhf{}
 \fancyfoot[C]{\fontsize{14}{14}\selectfont г. Владивосток \\ \the\year{}}
 
 \newcommand{\group}{Б9119-02.03.03техпро}
+\newcommand{\student}{А.В. Марков}
+% \newcommand{\student}{Л.О. Лазаренко}
 
 
 \begin{document}
@@ -29,20 +33,36 @@
 		\noindent\rule{\textwidth}{1pt} \\ [0.5cm]
 		\textbf{
 			\MakeUppercase{Институт математики и компьютерных технологий} \\ [0.5cm]
-            Направление 02.03.03 <<Математическое обеспечение и администрирование информационных систем>>
-		} \\ [1cm]
+            Направление 02.03.03 <<Математическое обеспечение и администрирование информационных систем>> \\ [1cm]
+			\MakeUppercase{Курсовая работа по дисциплине} \\
+			\MakeUppercase{<<Методы системного анализа и моделирования>>}
+		} \\ [0.5cm]
 		\MakeUppercase{
-			Тема ВКР: <<Автоматизация тестирования по белому ящику>>
-		} \\ [4cm]
+			Обзор предметной области \\
+			<<Автоматизированное тестирование по белому ящику>>
+		} \\ [2cm]
 	\end{center}
 
+	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+	\small
+
 	\begin{flushright}
-		\begin{tabular}{rl}
-			% Выполнили: студенты группы & \group \\ [0.1cm]
-			% Лазаренко Л.О. & \rule{\widthof\group}{0.15mm} \\ [0.1cm]
-			% Марков А.В. & \rule{\widthof\group}{0.15mm} \\ [0.1cm]
-			% Проверил: Гуляева К.А. & \rule{\widthof\group}{0.15mm} \\
+		\begin{tabular}{rrrr}
+			\multicolumn{4}{R{8cm}}{Студент группы \group, \student}                                      \\ [0.5cm]
+			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.5cm]
+			\multicolumn{4}{R{8cm}}{Руководитель зав. кафедрой ПММУиПО, д.т.н, профессор И. Л. Артемьева} \\ [0.5cm]
+			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.5cm]
+			\multicolumn{4}{R{8cm}}{Доцент кафедры, к.т.н. С.Н. Остроухова}                               \\ [0.5cm]
+			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г. 
 		\end{tabular}
 	\end{flushright}
+
+	\begin{flushleft}
+		\begin{tabular}{llll}
+			\multicolumn{4}{l}{Защищена оценкой \rule{2.66cm}{0.15mm}}                      \\ [0.5cm]
+			\multicolumn{2}{l}{\rule{3cm}{0.15mm}} & \multicolumn{2}{l}{\rule{3cm}{0.15mm}} \\ [0.5cm]
+			<<\rule{1cm}{0.15mm}>> & \multicolumn{2}{l}{\rule{3cm}{0.15mm}} & \the\year{} г.
+		\end{tabular}
+	\end{flushleft}
 
 \end{document}
