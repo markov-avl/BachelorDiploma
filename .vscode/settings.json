@@ -2,6 +2,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "workbench.editor.enablePreview": false,
     "explorer.confirmDelete": false,
+    "latex-workshop.message.badbox.show": false,
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.clean.fileTypes": [
