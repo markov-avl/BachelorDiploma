@@ -11,15 +11,23 @@
 \usepackage{calc}
 \usepackage{multicol}
 \usepackage{array}
+\usepackage{adjustbox}
 
 \renewcommand{\headrulewidth}{0pt}
 \fancyhf{}
 \fancyfoot[C]{\fontsize{14}{14}\selectfont г. Владивосток \\ \the\year{}}
 
 \newcommand{\group}{Б9119-02.03.03техпро}
-\newcommand{\student}{А.В. Марков}
-
-% \newcommand{\student}{Л.О. Лазаренко}
+% \newcommand{\overlined}[2]{\raisebox{.15ex}{\rlap{#1}}{\rule{#2 cm}{0.15mm}}}
+% \newcommand{\overlined}[2]{\vspace*{0cm}\underline{\makebox[#2 pt][c]{#1}}}
+\newcommand{\underlined}[2]{
+	\parbox[t][0cm][t]{#2 cm}{
+		\scriptsize
+		\centering
+		\rule[0pt]{\linewidth}{0.15mm}\\[-0.5ex]{#1}
+	}
+}
+\newcommand{\overlined}[2]{\raisebox{3.9pt}{\underline{\makebox[#2 cm][c]{#1}}}}
 
 
 \begin{document}
@@ -34,14 +42,18 @@
 		\noindent\rule{\textwidth}{1pt} \\ [0.5cm]
 		\textbf{
 			\MakeUppercase{Институт математики и компьютерных технологий} \\ [0.5cm]
-            Направление 02.03.03 <<Математическое обеспечение и администрирование информационных систем>> \\ [1cm]
-			\MakeUppercase{Курсовая работа по дисциплине} \\
-			\MakeUppercase{<<Методы системного анализа и моделирования>>}
+            Департамент программной инженерии и искусственного интеллекта
 		} \\ [0.5cm]
 		\MakeUppercase{
-			Обзор предметной области \\
+			Анализ предметной области \\
 			<<Автоматизированное тестирование по белому ящику>>
-		} \\ [1.5cm]
+		} \\ [1cm]
+		\textbf{
+			\MakeUppercase{Курсовой проект}
+		} \\ [0.5cm]
+		по дисциплине <<Методы системного анализа и моделирования>> \\
+		по образовательной программе подготовки бакалавров \\
+		по направлению 02.03.03 <<Математическое обеспечение и администрирование информационных систем>> \\ [1cm]
 	\end{center}
 
 	\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
@@ -50,20 +62,20 @@
 	\begin{flushright}
 		\begin{tabular}{rrrr}
 			\multicolumn{4}{R{8cm}}{Студент группы \group, А.В. Марков}                                      \\ [0.4cm]
-			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.4cm]
+			\underlined{(подпись)}{2} & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.4cm]
 			\multicolumn{4}{R{8cm}}{Студент группы \group, Л.О. Лазаренко}                                      \\ [0.4cm]
-			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.4cm]
-			\multicolumn{4}{R{8cm}}{Руководитель зав. кафедрой ИМиКТ, д.т.н, профессор И. Л. Артемьева} \\ [0.4cm]
-			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.4cm]
-			\multicolumn{4}{R{8cm}}{Доцент кафедры, к.т.н. С.Н. Остроухова}                               \\ [0.4cm]
-			\rule{3cm}{0.15mm}   & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г. 
+			\underlined{(подпись)}{2} & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.4cm]
+			% \multicolumn{4}{R{8cm}}{Руководитель зав. кафедрой ИМиКТ, д.т.н, профессор И. Л. Артемьева} \\ [0.4cm]
+			% \underlined{(подпись)}{3} & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г.  \\ [0.4cm]
+			\multicolumn{4}{R{8cm}}{Руководитель: доцент кафедры, к.т.н., С.Н. Остроухова}                               \\ [0.4cm]
+			\underlined{(подпись)}{2} & <<\rule{1cm}{0.15mm}>>   & \rule{3cm}{0.15mm}   & \the\year{} г. 
 		\end{tabular}
 	\end{flushright}
 
 	\begin{flushleft}
 		\begin{tabular}{llll}
-			\multicolumn{4}{l}{Защищена оценкой \rule{2.66cm}{0.15mm}}                      \\ [0.4cm]
-			\multicolumn{2}{l}{\rule{3cm}{0.15mm}} & \multicolumn{2}{l}{\rule{3cm}{0.15mm}} \\ [0.4cm]
+			\multicolumn{4}{l}{Защищена оценкой \rule{2.66cm}{0.15mm}}                                  \\ [0.4cm]
+			\multicolumn{2}{l}{\underlined{(подпись)}{2}} & \multicolumn{2}{l}{\overlined{И.Л. Артемьева}{4}} \\ [0.4cm]
 			<<\rule{1cm}{0.15mm}>> & \multicolumn{2}{l}{\rule{3cm}{0.15mm}} & \the\year{} г.
 		\end{tabular}
 	\end{flushleft}

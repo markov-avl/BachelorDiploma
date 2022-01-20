@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[14pt]{extsizes}
-\usepackage[left=30mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry}
+\usepackage[left=30mm, top=15mm, right=15mm, bottom=20mm, nohead, footskip=10mm]{geometry}
 \usepackage{cmap}
 \usepackage{setspace}
 \usepackage{pdfpages}
@@ -19,18 +19,49 @@
 \usepackage{color}
 \usepackage{caption}
 \usepackage{enumitem}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
 
+% page number settings
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\fontsize{14pt}{14pt}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% list settings
+\parindent=1cm
 \setlist{nosep}
-\setlist[itemize]{leftmargin=2cm}
-\setlist[enumerate]{leftmargin=2cm}
+\setlist[itemize, 1]{align=left, leftmargin=0cm, labelindent=\parindent, listparindent=\parindent, labelwidth=1cm, itemindent=!}
+\setlist[itemize, 2]{align=left, leftmargin=2cm, labelindent=2cm, listparindent=\parindent, labelwidth=1cm, itemindent=!}
+\setlist[itemize, 3]{align=left, leftmargin=3cm, labelindent=3cm, listparindent=\parindent, labelwidth=1cm, itemindent=!}
+\setlist[enumerate, 1]{align=left, leftmargin=0cm, labelindent=\parindent, listparindent=\parindent, labelwidth=1cm, itemindent=!}
+\setlist[enumerate, 2]{align=left, leftmargin=2cm, labelindent=2cm, listparindent=\parindent, labelwidth=1cm, itemindent=!}
+\setlist[enumerate, 3]{align=left, leftmargin=3cm, labelindent=3cm, listparindent=\parindent, labelwidth=1cm, itemindent=!}
 \onehalfspacing
-\parindent=1.25cm
+
+% list enumerate settings
+\renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\theenumii}{\theenumi.\arabic{enumii}.}
+
+% table caption settings
+\captionsetup[table]{singlelinecheck=false, name=Т а б л и ц а\hspace{0.2cm}, skip=0pt}
 
 \captionsetup[lstlisting]{singlelinecheck=false, margin=0pt, font={sf,sl,footnotesize}}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+
+% rename table of contents name
+\addto\captionsrussian{\renewcommand{\contentsname}{\centeringОглавление}}
+
+% rename bibliography name
+\addto{\captionsrussian}{\renewcommand{\refname}{Список литературы и интернет источников}}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
 
 \lstset{frame=tb,
@@ -74,7 +105,11 @@
         % введение
         \input{sections/introduction}
         % основная часть
-        \input{sections/subject-area-overview}
+        \input{sections/glossary}
+        \input{sections/methods}
+        \input{sections/classifications}
+        \input{sections/design}
+        \input{sections/solutions}
         % заключение
         \input{sections/conclusion}
         % список литературы
